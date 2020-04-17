@@ -1,0 +1,40 @@
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
+
+public class myBinarySearchTreeTest{
+
+  
+ 
+  @Test
+  public void t1(){
+    myBinarySearchTreeNode r = new myBinarySearchTreeNode({7,2,9});
+    r.insert(8);
+    myBinarySearchTreeNode exp = new myBinarySearchTreeNode({7,2,9});
+    assertEquals(exp.myValue, r.myValue);
+  }
+
+
+
+
+  @Test
+  public void t3(){
+    myBinarySearchTreeNode r = new myBinarySearchTreeNode({7,2,3,5,9});
+    assertEquals(3, r.depth(9));
+  }
+
+  @Test
+  public void t4(){
+    myBinarySearchTreeNode r = new myBinarySearchTreeNode({5,1,3,1,2});
+    assertEquals(3, r.height());
+  }
+
+  @Test
+  public void t5(){
+    myBinarySearchTreeNode r = new myBinarySearchTreeNode({5,3,8,2,4,7});
+    r.insert(9);
+    myBinarySearchTreeNode exp = new myBinarySearchTreeNode({5,3,8,2,4,7,9});
+    assertEquals(exp.myValue, r.myValue);
+  }
+  
+
+}
